@@ -1,3 +1,7 @@
+## Skynet Websocket Support
+
+See http://www.cnblogs.com/Jackie-Snow/p/7122037.html
+
 ## Skynet
 
 Skynet is a lightweight online game framework, and it can be used in many other fields.
