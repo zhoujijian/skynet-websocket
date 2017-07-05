@@ -1,6 +1,5 @@
 local skynet = require "skynet"
 local socket = require "skynet.socket"
-local dkjson = require "dkjson"
 local frame  = require "websocket.frame"
 local handshake = require "websocket.handshake"
 local sockethelper = require "http.sockethelper"
@@ -70,15 +69,7 @@ local function _dispatch(text, opcode)
 	assert(opcode == TEXT or opcode == CLOSE, opcode)
 
 	if opcode == TEXT then
-		local tbl = dkjson.decode(text)
-		print("name:" .. tbl.name)
-		print("age:"  .. tbl.age)
-		if tbl then
-			--[[
-			local req = assert(REQUEST[tbl.message])
-			req(tbl)
-			--]]
-		end
+		-- your message deserialization and logic
 		return true
 	end
 
